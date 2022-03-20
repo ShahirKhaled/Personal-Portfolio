@@ -274,7 +274,7 @@ svg {
 #facebook:hover .path-cls { fill: url(#face-linear-grad) }
 #youtube:hover .path-cls { fill: #f00 }
 
-button {
+button, .button {
     display: block;
     background-color: var(--button-color);
     border-radius: 0.5rem;
@@ -284,7 +284,7 @@ button {
     margin-top: 1rem;
 }
 
-button:hover {
+button:hover, .button:hover {
     background-color: var(--dark-text-color);
     color: var(--button-color);
 }
@@ -373,14 +373,13 @@ section:nth-child(even)::after {
 
 .section-2::after { content: 'About Me' }
 .section-3::after { content: 'My Skills' }
-.section-4::after { content: 'What I do' }
-.section-5::after { content: 'My Work' }
+.section-4::after { content: 'My Work' }
 
 .section-2 .text {
     width: max(20rem, 40vw);
 }
 
-.section-3, .section-4, .section-5, .section-6 {
+.section-3, .section-4, .section-5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -388,12 +387,12 @@ section:nth-child(even)::after {
     padding: var(--section-padding);
 }
 
-.section-3>h2, .section-4>h2, .section-5>h2, .section-6>h2 {
+.section-3>h2, .section-4>h2, .section-5>h2 {
     align-self: flex-start;
     padding-left: clamp(2rem, 20vw, 10rem);
 }
 
-.section-3>div, .section-4>div, .section-5>div, .section-6>div {
+.section-3>div, .section-4>div, .section-5>div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -445,11 +444,8 @@ section:nth-child(even)::after {
 .skill-prog-container>#nodejs-progress { width: 30% }
 .skill-prog-container>#uxui-progress { width: 70% }
 
-.section-4, .section-5, .section-6 { /* Remove this */
-    min-height: 95vh;
-}
 
-.section-5>div { position: relative; }
+.section-4>div { position: relative; }
 
 .iframe {
     height: 27.5rem;
@@ -483,7 +479,7 @@ iframe {
 }
 
 .hamey-image::after {
-    content: 'See Code in gitHub';
+    content: 'See Source in gitHub';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -500,7 +496,7 @@ iframe {
     opacity: 1;
 }
 
-.section-5 img {
+.section-4 img {
     width: min(80vw, 30rem);
     object-fit: contain;
 }
@@ -511,8 +507,8 @@ iframe {
     right: 0.5rem;
 }
 
-.section-6 h3 { font-size: 2rem; }
-.section-6 span { color: var(--button-color) }
+.section-5 h3 { font-size: 2rem; }
+.section-5 span { color: var(--button-color) }
 
 
 

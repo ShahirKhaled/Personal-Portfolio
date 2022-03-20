@@ -4,25 +4,28 @@ const menuElements = document.querySelectorAll('.menu-container,.hamburger-conta
 const progressBars = document.querySelectorAll('[data-increase-width]');
 const sectionOne = document.querySelectorAll('[data-loading-animation], [data-animate-rtl], [data-animate-ltr]');
 const header = document.querySelectorAll('[data-header]');
-const formButton = document.querySelector('form button');
 const formLink = document.querySelector('form a');
 const formInputs = document.querySelectorAll('#subject, #message');
+const errorMessage = document.querySelector('form>p');
 
 menuContainer.addEventListener('click', e => {
     if (e.target.matches('nav *:not(a),nav')) return;
     else menuElements.forEach(element => element.classList.toggle('open'));
 });
 
-formButton.addEventListener('click', (e) => {
-    e.preventDefault();
+function myFunction() {
     let array = [];
     formInputs.forEach(item => {
+        if (item.value === '') return;
         array.push(item.value);
     });
-    if (array.length < 2) return;
-    console.log(array)
+    if (array.length < 2) {
+        formLink.removeAttribute('href');
+        errorMessage.style.display = 'block';
+        return;
+    }
     formLink.href += '?subject=' + array[0] + '&body=' + array[1];
-});
+}
 
 window.addEventListener('load', () => {
     document.body.classList.remove('stop-scrolling');

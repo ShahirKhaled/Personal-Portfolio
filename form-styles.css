@@ -54,14 +54,20 @@ label {
 }
 
 .input:invalid { color: red; }
-.input:invalid:not(:placeholder-shown)~.error-message {
+input[type='email'].input:invalid:not(:placeholder-shown)~.error-message {
     display: block;
     position: absolute;
     top: 110%;
     color: red;
 }
 
-form button {
+form .button {
+    display: inline-block;
     font-size: 0.75em;
     padding: 0.5rem 1.5rem;
+}
+
+form>p {
+    display: none;
+    color: red;
 }
