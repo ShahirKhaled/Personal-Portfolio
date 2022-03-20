@@ -1,0 +1,17 @@
+@font-face {
+    font-family: BankGothic;
+    src: url('BankGothic Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url('Raleway-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url('Raleway-SemiBold.ttf');
+    font-weight: 600;
+}

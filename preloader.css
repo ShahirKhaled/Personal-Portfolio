@@ -1,0 +1,53 @@
+.preloader {
+    position: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.1em;
+    font-size: min(6vw, 1.75rem);
+    inset: 0;
+    background-color: #1b232a;
+    z-index: 10;
+    user-select: none;
+    cursor: default;
+}
+
+.preloader-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.preloader-text::before, .preloader-text::after {
+    font-size: 1.75em;
+    display: inline-block;
+    color: #65c5ff;
+}
+
+.preloader-text::before {
+    content: '{';
+    animation: brackets 500ms cubic-bezier(1,0,0,1) 500ms infinite alternate;
+}
+
+.preloader-text::after {
+    content: '}';
+    animation: brackets 500ms cubic-bezier(1,0,0,1) infinite alternate;
+}
+
+.preloader.remove {
+    transition: 300ms ease-in;
+    opacity: 0;
+    transform: translateX(110%);
+}
+
+body.stop-scrolling { overflow: hidden; }
+
+@keyframes brackets {
+    from {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(2);
+        opacity: 1;
+    }
+}

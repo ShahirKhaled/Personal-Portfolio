@@ -1,0 +1,119 @@
+[data-loading-animation] {
+    animation: bottom-to-top 700ms ease-out both;
+}
+
+[data-loading-animation].show {
+    animation: top-to-bottom 700ms ease-out both;
+}
+
+[data-animate-ltr] {
+    animation: reverse-left-to-right 700ms ease-out both;
+}
+
+[data-animate-ltr].show {
+    animation: left-to-right 700ms ease-out both;
+}
+
+[data-animate-rtl] {
+    animation: reverse-right-to-left 700ms ease-out both;
+}
+
+[data-animate-rtl].show {
+    animation: right-to-left 700ms ease-out both;
+}
+
+@keyframes top-to-bottom {
+    0% {
+        transform: translateY(-60%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bottom-to-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(-60%);
+        opacity: 0;
+    }
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes reverse-left-to-right {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes right-to-left {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes reverse-right-to-left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+[data-header] { transition: 1s ease-out; }
+[data-header].hide {
+    transform: translateY(-200px);
+    opacity: 0;
+}
+
+[data-increase-width] {
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: 600ms ease-out;
+}
+
+[data-increase-width].scale-x {
+    transform: scaleX(1);
+}

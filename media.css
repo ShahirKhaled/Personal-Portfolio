@@ -1,0 +1,19 @@
+@media only screen and (max-width: 425px), (orientation: portrait) {
+    .section-1 {
+        justify-content: center;
+        padding: 0 2rem;
+        background-size: auto 50%;
+        background-position: 60%;
+    }
+    nav.open {
+        height: 100vh;
+        width: 100vh;
+    }
+    .skill-prog-container{
+        width: 15rem;
+    }
+    .section-2 blockquote {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

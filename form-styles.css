@@ -1,0 +1,67 @@
+textarea {
+    resize: none;
+    border: 2px solid #ffffff !important;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+form {
+    width: 20rem;
+    font-size: 1.25rem;
+}
+
+.input-field {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px dashed var(--text-color);
+    margin: 2rem auto 0.5rem;
+}
+
+.input-field::after {
+    content: '';
+    position: relative;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--button-color);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 300ms ease-out;
+    top: 2px;
+}
+
+.error-message { display: none; }
+.input-field:focus-within { border-color: transparent }
+.input-field:focus-within::after { transform: scaleX(1) }
+.input-field:focus-within label, .input:not(:placeholder-shown) + label { transform: scale(0.5) translateY(-1.5rem) }
+
+label {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    transform-origin: 0;
+    transition: transform 300ms ease-out;
+}
+
+.input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 0.65em;
+    width: 100%;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.input:invalid { color: red; }
+.input:invalid:not(:placeholder-shown)~.error-message {
+    display: block;
+    position: absolute;
+    top: 110%;
+    color: red;
+}
+
+form button {
+    font-size: 0.75em;
+    padding: 0.5rem 1.5rem;
+}
