@@ -424,7 +424,7 @@ section:nth-child(even)::after {
 }
 
 .skill-prog-container {
-    width: 20rem;
+    width: 19rem;
     background-color: #292929;
     margin: 0.5rem 0;
     overflow: hidden;

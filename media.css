@@ -20,4 +20,7 @@
         align-self: center;
         padding: 0;
     }
+    .section-5>div {
+        width: 90vw;
+    }
 }
