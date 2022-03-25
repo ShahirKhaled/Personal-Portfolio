@@ -49,24 +49,33 @@ a,button {
     transform: translateX(0);
 }
 
-#logo {
+header {
     position: fixed;
-    top: 5vw;
-    left: 7vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw 7vw 0;
+    width: 100%;
+    transition: box-shadow 100ms ease-out;
     z-index: 1;
+}
+
+header.add>* {
+    color: var(--dark-text-color);
+}
+
+#logo {
     display: inline-block;
     width: 10rem;
     fill: currentColor;
 }
 
 .menu-container{
-    position: fixed;
-    top: 5vw;
-    right: 7vw;
+    position: relative;
     height: 32px;
     width: 45px;
-    z-index: 1;
 }
+
+.menu-container.open { color: var(--text-color) }
 
 .menu-container::before{
     content: '';
@@ -509,11 +518,6 @@ iframe {
 
 .section-5 h3 { font-size: 2rem; }
 .section-5 span { color: var(--button-color) }
-
-
-
-
-
 
 footer {
     display: flex;

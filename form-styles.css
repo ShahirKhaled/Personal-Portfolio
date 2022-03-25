@@ -1,8 +1,12 @@
-textarea {
+textarea.input {
     resize: none;
-    border: 2px solid #ffffff !important;
+    outline: 1px dashed var(--text-color);
     padding: 0.5rem;
     border-radius: 0.5rem;
+}
+
+textarea.input:focus {
+    outline: 2px solid var(--button-color);
 }
 
 form {

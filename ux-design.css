@@ -102,8 +102,8 @@
     }
 }
 
-[data-header] { transition: 1s ease-out; }
-[data-header].hide {
+header>* { transition: 1s ease-out; }
+header>*.hide {
     transform: translateY(-200px);
     opacity: 0;
 }
