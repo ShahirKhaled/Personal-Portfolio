@@ -54,4 +54,4 @@ window.addEventListener('scroll', () => {
     const removingCondition = sectionTwoSize.bottom < header.scrollHeight || sectionTwoSize.top > header.scrollHeight;
     if (sectionTwoSize.top < header.scrollHeight) header.classList.add('add');
     if (removingCondition) header.classList.remove('add');
-})
+});
