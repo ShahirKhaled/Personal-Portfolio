@@ -55,7 +55,6 @@ header {
     justify-content: space-between;
     padding: 5vw 7vw 0;
     width: 100%;
-    transition: box-shadow 100ms ease-out;
     z-index: 1;
 }
 
