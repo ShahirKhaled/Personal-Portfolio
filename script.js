@@ -25,6 +25,8 @@ window.addEventListener('load', () => {
     const anotherObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => entry.target.classList.toggle('scale-x', entry.isIntersecting));
     }, { rootMargin: '-70px 0px' });
+
+    progressBars.forEach(element => anotherObserver.observe(element));
 });
 
 menuContainer.addEventListener('click', e => {
