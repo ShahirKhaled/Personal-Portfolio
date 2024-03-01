@@ -107,13 +107,3 @@ header>*.hide {
     transform: translateY(-200px);
     opacity: 0;
 }
-
-[data-increase-width] {
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    transition: 600ms ease-out;
-}
-
-[data-increase-width].scale-x {
-    transform: scaleX(1);
-}

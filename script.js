@@ -1,7 +1,7 @@
 const preloader = document.querySelector('.preloader');
 const menuContainer = document.querySelector('.menu-container');
 const menuElements = document.querySelectorAll('.menu-container,.hamburger-container,nav,ul li');
-const progressBars = document.querySelectorAll('[data-increase-width]');
+const progressBars = document.querySelectorAll('.skill-prog-container');
 const lazyLoadingElements = document.querySelectorAll('[data-loading-animation], [data-animate-rtl], [data-animate-ltr]');
 const headerChildren = document.querySelectorAll('header>*');
 const sectionTwo = document.querySelector('.section-2');
@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
 
     const anotherObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => entry.target.classList.toggle('scale-x', entry.isIntersecting));
-    }, { rootMargin: '-70px 0px' });
+    }, { rootMargin: '-20px 0px' });
 
     progressBars.forEach(element => anotherObserver.observe(element));
 });

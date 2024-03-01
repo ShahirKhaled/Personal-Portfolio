@@ -277,7 +277,7 @@ svg {
     fill: currentColor;
 }
 
-#instagram:hover .path-cls { fill: url(#insta-linear-grad) }
+#linkedin:hover .path-cls { fill: #0a66c2 }
 #github:hover .path-cls { fill: var(--button-color) }
 #facebook:hover .path-cls { fill: url(#face-linear-grad) }
 #youtube:hover .path-cls { fill: #f00 }
@@ -437,21 +437,35 @@ section:nth-child(even)::after {
     margin: 0.5rem 0;
     overflow: hidden;
     border-radius: 0.5rem;
+    position: relative;
+}
+
+.skill-prog-container::before {
+    content: '';
+    background-color: var(--button-color);
+    border-radius: 0 2rem 2rem 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transform-origin: 0 50%;
+    transition: 600ms ease-out;
 }
 
 .skill-prog-container>div {
-    background-color: var(--button-color);
-    padding: 0.5rem 1rem;
     color: var(--section-1-bgc);
-    border-radius: 0 2rem 2rem 0;
+    padding: 0.5rem 1rem;
+    position: relative;
 }
 
-.skill-prog-container>#html-progress { width: 90% }
-.skill-prog-container>#css-progress { width: 110% }
-.skill-prog-container>#javascript-progress { width: 95% }
-.skill-prog-container>#nodejs-progress { width: 30% }
-.skill-prog-container>#uxui-progress { width: 70% }
+.skill-prog-container.html::before { right: 10% }
+.skill-prog-container.css::before { right: -10% }
+.skill-prog-container.javascript::before { right: 5% }
+.skill-prog-container.nodejs::before { right: 70% }
+.skill-prog-container.uxui::before { right: 30% }
 
+.skill-prog-container.scale-x::before { transform: translateX(0) }
 
 .section-4>div { position: relative; }
 
